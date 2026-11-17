@@ -1,0 +1,4 @@
+import type {Metadata} from 'next';import {Bangers,Montserrat,JetBrains_Mono} from 'next/font/google';import {Providers} from '@/components/layout/shell';import './globals.css';
+const display=Bangers({weight:'400',subsets:['latin'],variable:'--font-display'});const body=Montserrat({subsets:['latin'],variable:'--font-body'});const mono=JetBrains_Mono({subsets:['latin'],variable:'--font-mono'});
+export const metadata:Metadata={title:{default:'OrderShield — Order Risk Research',template:'%s | OrderShield'},description:'Explore e-commerce risk research through PySpark, Kafka and saved MLlib inference.',robots:{index:false,follow:false}};
+export default function Layout({children}:{children:React.ReactNode}){return <html lang="en"><body className={`${display.variable} ${body.variable} ${mono.variable}`}><a className="skip" href="#main">Skip to content</a><Providers>{children}</Providers></body></html>}

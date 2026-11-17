@@ -1,0 +1,11 @@
+﻿{
+    "service":  "OrderShield API",
+    "status":  "running",
+    "artifacts_available":  true,
+    "missing_artifacts":  [
+
+                          ],
+    "spark_model_loaded":  true,
+    "kafka_tcp_reachable":  true,
+    "note":  "TCP reachability alone does not verify Kafka protocol health."
+}

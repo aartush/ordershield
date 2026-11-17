@@ -1,0 +1,119 @@
+﻿{
+    "name":  "OrderShield",
+    "subtitle":  "E-Commerce Order Risk Research",
+    "historical_orders":  99441,
+    "resolved_orders":  97712,
+    "risky_orders":  1234,
+    "selected_model":  "random_forest",
+    "threshold":  0.5688129660417477,
+    "validation_metrics":  {
+                               "orders":  19728,
+                               "risk_orders":  82,
+                               "risk_prevalence":  0.004156528791565288,
+                               "average_precision":  0.007871443309059194,
+                               "ap_lift_over_prevalence":  1.8937540683063387,
+                               "roc_auc":  0.6365486178530726,
+                               "threshold":  0.5688129660417477,
+                               "precision":  0.026615969581749048,
+                               "recall":  0.08536585365853659,
+                               "f1":  0.04057971014492753,
+                               "alert_rate":  0.013331305758313058,
+                               "confusion_matrix":  {
+                                                        "tn":  19390,
+                                                        "fp":  256,
+                                                        "fn":  75,
+                                                        "tp":  7
+                                                    }
+                           },
+    "live":  {
+                 "server_time":  1792404136.4065285,
+                 "consumer_active":  true,
+                 "heartbeat_age_seconds":  3.7,
+                 "consumer":  {
+                                  "active":  true,
+                                  "heartbeat":  1792404132.6723142,
+                                  "feature_version":  "payment_snapshot_v1",
+                                  "message":  "Waiting for next trigger",
+                                  "query_id":  "a38a4ca7-08b3-4cd8-ba85-34024810dc86",
+                                  "batch_id":  18,
+                                  "last_input_rows":  0
+                              },
+                 "total_events":  85,
+                 "alerts":  0,
+                 "scored_last_60_seconds":  0,
+                 "latest":  [
+                                {
+                                    "event_id":  "0f0f89b0da6a-5",
+                                    "order_id":  "5714245e554b639710146cab5708287a",
+                                    "risk_score":  0.47604030727783453,
+                                    "alert":  false,
+                                    "emitted_at":  1792403371.5075693,
+                                    "scored_at":  1792403820.0614471,
+                                    "source_partition":  0,
+                                    "source_offset":  84,
+                                    "batch_id":  17,
+                                    "queue_to_result_seconds":  448.554
+                                },
+                                {
+                                    "event_id":  "0f0f89b0da6a-4",
+                                    "order_id":  "a194ac8fcd32099c21886a04ebe2e6e8",
+                                    "risk_score":  0.513958719798542,
+                                    "alert":  false,
+                                    "emitted_at":  1792403370.4771245,
+                                    "scored_at":  1792403820.0579247,
+                                    "source_partition":  0,
+                                    "source_offset":  83,
+                                    "batch_id":  17,
+                                    "queue_to_result_seconds":  449.581
+                                },
+                                {
+                                    "event_id":  "0f0f89b0da6a-3",
+                                    "order_id":  "705e297aabac0f1fae1db3971e90952d",
+                                    "risk_score":  0.46322019363226713,
+                                    "alert":  false,
+                                    "emitted_at":  1792403369.472806,
+                                    "scored_at":  1792403820.053934,
+                                    "source_partition":  0,
+                                    "source_offset":  82,
+                                    "batch_id":  17,
+                                    "queue_to_result_seconds":  450.581
+                                },
+                                {
+                                    "event_id":  "0f0f89b0da6a-2",
+                                    "order_id":  "f7e9a79b157a77f2b176767e16124553",
+                                    "risk_score":  0.4354050059960762,
+                                    "alert":  false,
+                                    "emitted_at":  1792403368.464406,
+                                    "scored_at":  1792403820.0501504,
+                                    "source_partition":  0,
+                                    "source_offset":  81,
+                                    "batch_id":  17,
+                                    "queue_to_result_seconds":  451.586
+                                },
+                                {
+                                    "event_id":  "0f0f89b0da6a-1",
+                                    "order_id":  "0db6ccc5c835057ef7f585066ec9f7ca",
+                                    "risk_score":  0.46237654141182266,
+                                    "alert":  false,
+                                    "emitted_at":  1792403367.3496706,
+                                    "scored_at":  1792403820.0353866,
+                                    "source_partition":  0,
+                                    "source_offset":  80,
+                                    "batch_id":  17,
+                                    "queue_to_result_seconds":  452.686
+                                }
+                            ],
+                 "database_available":  true
+             },
+    "score_note":  "Class-weighted risk scores are not calibrated cancellation probabilities.",
+    "limitations":  [
+                        "Current predictive performance is limited.",
+                        "Payment availability at scoring time is assumed; source timestamps are absent.",
+                        "Historical outcome-resolution timestamps are unavailable.",
+                        "Validation selected the model and threshold.",
+                        "The earlier baseline test set was inspected; it is not a pristine holdout.",
+                        "Scenario changes show associations, not causal effects.",
+                        "Brazil 2016â2018 data does not establish present-day Indian COD/RTO performance.",
+                        "Spark runs locally; multi-node scalability has not been benchmarked."
+                    ]
+}

@@ -1,0 +1,61 @@
+{
+  "feature_version": "payment_snapshot_v1",
+  "selected_model": "random_forest",
+  "selection_metric": "validation_average_precision",
+  "threshold_objective": "maximum_validation_f1",
+  "threshold": 0.5688129660417477,
+  "validation_results": {
+    "logistic_regression": {
+      "orders": 19728,
+      "risk_orders": 82,
+      "risk_prevalence": 0.004156528791565288,
+      "average_precision": 0.0069773662097170844,
+      "ap_lift_over_prevalence": 1.6786522022597397,
+      "roc_auc": 0.6245949650273251,
+      "threshold": 0.5567346061822285,
+      "precision": 0.013914656771799629,
+      "recall": 0.18292682926829268,
+      "f1": 0.02586206896551724,
+      "alert_rate": 0.054643146796431466,
+      "confusion_matrix": {
+        "tn": 18583,
+        "fp": 1063,
+        "fn": 67,
+        "tp": 15
+      }
+    },
+    "random_forest": {
+      "orders": 19728,
+      "risk_orders": 82,
+      "risk_prevalence": 0.004156528791565288,
+      "average_precision": 0.007871443309059194,
+      "ap_lift_over_prevalence": 1.8937540683063387,
+      "roc_auc": 0.6365486178530726,
+      "threshold": 0.5688129660417477,
+      "precision": 0.026615969581749048,
+      "recall": 0.08536585365853659,
+      "f1": 0.04057971014492753,
+      "alert_rate": 0.013331305758313058,
+      "confusion_matrix": {
+        "tn": 19390,
+        "fp": 256,
+        "fn": 75,
+        "tp": 7
+      }
+    }
+  },
+  "model_path": "backend/models/payment_snapshot_v1",
+  "score_note": "Class-weighted risk scores are not calibrated cancellation probabilities.",
+  "limitations": [
+    "Current predictive performance is limited.",
+    "Payment availability at scoring time is assumed; source timestamps are absent.",
+    "Historical outcome-resolution timestamps are unavailable.",
+    "Validation selected the model and threshold.",
+    "The earlier baseline test set was inspected; it is not a pristine holdout.",
+    "Scenario changes show associations, not causal effects.",
+    "Brazil 2016â2018 data does not establish present-day Indian COD/RTO performance.",
+    "Spark runs locally; multi-node scalability has not been benchmarked."
+  ],
+  "test_evaluated": false,
+  "reload_verified": true
+}

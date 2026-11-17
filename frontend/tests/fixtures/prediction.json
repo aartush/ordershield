@@ -1,0 +1,36 @@
+﻿{
+    "model":  "random_forest",
+    "feature_version":  "payment_snapshot_v1",
+    "score_note":  "Class-weighted risk scores are not calibrated cancellation probabilities.",
+    "total_call_ms":  247.44,
+    "risk_score":  0.5418473785650892,
+    "alert":  false,
+    "decision":  "below_threshold",
+    "threshold":  0.5688129660417477,
+    "features":  {
+                     "customer_state":  "SP",
+                     "purchase_hour":  12.0,
+                     "purchase_weekday":  6.0,
+                     "purchase_month":  6.0,
+                     "is_weekend":  0.0,
+                     "payment_total":  150.0,
+                     "max_installments":  1.0,
+                     "uses_credit_card":  1.0,
+                     "uses_boleto":  0.0,
+                     "uses_voucher":  0.0,
+                     "uses_debit_card":  0.0
+                 },
+    "input":  {
+                  "customer_state":  "SP",
+                  "purchase_date":  "2018-06-15",
+                  "purchase_hour":  12,
+                  "payment_total":  150.0,
+                  "max_installments":  1,
+                  "payment_methods":  [
+                                          "credit_card"
+                                      ]
+              },
+    "warnings":  [
+
+                 ]
+}

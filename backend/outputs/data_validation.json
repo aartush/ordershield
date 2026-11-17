@@ -1,0 +1,85 @@
+{
+  "tables": {
+    "olist_customers_dataset.csv": {
+      "rows": 99441,
+      "columns": 5
+    },
+    "olist_geolocation_dataset.csv": {
+      "rows": 1000163,
+      "columns": 5
+    },
+    "olist_orders_dataset.csv": {
+      "rows": 99441,
+      "columns": 8
+    },
+    "olist_order_items_dataset.csv": {
+      "rows": 112650,
+      "columns": 7
+    },
+    "olist_order_payments_dataset.csv": {
+      "rows": 103886,
+      "columns": 5
+    },
+    "olist_order_reviews_dataset.csv": {
+      "rows": 99224,
+      "columns": 7
+    },
+    "olist_products_dataset.csv": {
+      "rows": 32951,
+      "columns": 9
+    },
+    "olist_sellers_dataset.csv": {
+      "rows": 3095,
+      "columns": 4
+    },
+    "product_category_name_translation.csv": {
+      "rows": 71,
+      "columns": 2
+    }
+  },
+  "order_statuses": [
+    {
+      "order_status": "delivered",
+      "count": 96478
+    },
+    {
+      "order_status": "shipped",
+      "count": 1107
+    },
+    {
+      "order_status": "canceled",
+      "count": 625
+    },
+    {
+      "order_status": "unavailable",
+      "count": 609
+    },
+    {
+      "order_status": "invoiced",
+      "count": 314
+    },
+    {
+      "order_status": "processing",
+      "count": 301
+    },
+    {
+      "order_status": "created",
+      "count": 5
+    },
+    {
+      "order_status": "approved",
+      "count": 2
+    }
+  ],
+  "orders_missing_values": {
+    "order_id": 0,
+    "customer_id": 0,
+    "order_status": 0,
+    "order_purchase_timestamp": 0,
+    "order_approved_at": 160,
+    "order_delivered_carrier_date": 1783,
+    "order_delivered_customer_date": 2965,
+    "order_estimated_delivery_date": 0
+  },
+  "duplicate_order_ids": 0
+}

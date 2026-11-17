@@ -1,0 +1,69 @@
+{
+  "feature_version": "payment_snapshot_v1",
+  "target": "canceled_or_unavailable_vs_delivered",
+  "scoring_stage": "payment_details_available",
+  "categorical_features": [
+    "customer_state"
+  ],
+  "numeric_features": [
+    "purchase_hour",
+    "purchase_weekday",
+    "purchase_month",
+    "is_weekend",
+    "payment_total",
+    "max_installments",
+    "uses_credit_card",
+    "uses_boleto",
+    "uses_voucher",
+    "uses_debit_card"
+  ],
+  "excluded_from_model": [
+    "order_id",
+    "purchase_time",
+    "label",
+    "split"
+  ],
+  "split_boundaries": {
+    "validation_start": "2018-04-01",
+    "test_start": "2018-07-01"
+  },
+  "split_counts": [
+    {
+      "split": "test",
+      "label": 0,
+      "count": 12510
+    },
+    {
+      "split": "test",
+      "label": 1,
+      "count": 169
+    },
+    {
+      "split": "train",
+      "label": 0,
+      "count": 64322
+    },
+    {
+      "split": "train",
+      "label": 1,
+      "count": 983
+    },
+    {
+      "split": "validation",
+      "label": 0,
+      "count": 19646
+    },
+    {
+      "split": "validation",
+      "label": 1,
+      "count": 82
+    }
+  ],
+  "orders_without_payments": 1,
+  "limitations": [
+    "Payment features come from an untimestamped historical snapshot; availability at scoring time is assumed, not verified.",
+    "Historical snapshot lacks outcome-resolution timestamps; time splitting cannot fully reconstruct historical label availability.",
+    "Item features are excluded because missing item records strongly correlate with the outcome.",
+    "The previous baseline test set has already been inspected; it is not a completely unseen final holdout."
+  ]
+}

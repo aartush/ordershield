@@ -1,0 +1,55 @@
+﻿{
+    "states":  [
+                   "AC",
+                   "AL",
+                   "AM",
+                   "AP",
+                   "BA",
+                   "CE",
+                   "DF",
+                   "ES",
+                   "GO",
+                   "MA",
+                   "MG",
+                   "MS",
+                   "MT",
+                   "PA",
+                   "PB",
+                   "PE",
+                   "PI",
+                   "PR",
+                   "RJ",
+                   "RN",
+                   "RO",
+                   "RR",
+                   "RS",
+                   "SC",
+                   "SE",
+                   "SP",
+                   "TO"
+               ],
+    "payment_methods":  [
+                            "credit_card",
+                            "boleto",
+                            "voucher",
+                            "debit_card"
+                        ],
+    "currency":  "BRL",
+    "feature_version":  "payment_snapshot_v1",
+    "default_order":  {
+                          "customer_state":  "SP",
+                          "purchase_date":  "2018-06-15",
+                          "purchase_hour":  12,
+                          "payment_total":  150.0,
+                          "max_installments":  1,
+                          "payment_methods":  [
+                                                  "credit_card"
+                                              ]
+                      },
+    "sample_categories":  [
+                              "detected_risk",
+                              "missed_risk",
+                              "false_alert",
+                              "correctly_below_threshold"
+                          ]
+}

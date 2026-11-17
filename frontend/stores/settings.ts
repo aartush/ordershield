@@ -1,0 +1,3 @@
+import {create} from 'zustand';import {persist} from 'zustand/middleware';import type {Draft} from '@/lib/types';import {defaultOrder} from '@/lib/config';
+type Settings={collapsed:boolean;presentation:boolean;motion:'system'|'reduced'|'full';a:Draft;b:Draft;toggle:(key:'collapsed'|'presentation')=>void;setMotion:(v:Settings['motion'])=>void;setDraft:(key:'a'|'b',v:Draft)=>void};
+export const useSettings=create<Settings>()(persist((set)=>({collapsed:false,presentation:false,motion:'system',a:{...defaultOrder},b:{...defaultOrder},toggle:key=>set(s=>({[key]:!s[key]})),setMotion:motion=>set({motion}),setDraft:(key,v)=>set({[key]:v})}),{name:'ordershield-settings',skipHydration:true}));

@@ -1,0 +1,22 @@
+# Normalise line endings for source text
+* text=auto eol=lf
+
+# Saved Spark model: metadata and parquet parts must stay byte-identical.
+# Git must never rewrite line endings inside these files.
+backend/models/** -text
+backend/data/raw/** -text
+backend/data/processed/** -text
+backend/data/*.zip -text
+backend/tools/** -text
+*.parquet binary
+*.crc binary
+*.zip binary
+*.pdb binary
+*.dll binary
+*.lib binary
+*.exp binary
+*.exe binary
+
+# Shell scripts and PowerShell keep their own conventions
+*.ps1 text eol=crlf
+*.sh  text eol=lf

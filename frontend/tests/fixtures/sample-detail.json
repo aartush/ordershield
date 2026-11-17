@@ -1,0 +1,33 @@
+﻿{
+    "sample":  {
+                   "order_id":  "693c6ae1a1ab759aae8dd08ff9eff189",
+                   "purchase_time":  "2018-06-08T20:42:36.000",
+                   "customer_state":  "SP",
+                   "purchase_hour":  12,
+                   "purchase_weekday":  6,
+                   "purchase_month":  6,
+                   "is_weekend":  0,
+                   "payment_total":  1270.7,
+                   "max_installments":  10.0,
+                   "uses_credit_card":  1.0,
+                   "uses_boleto":  0.0,
+                   "uses_voucher":  0.0,
+                   "uses_debit_card":  0.0,
+                   "label":  0,
+                   "split":  "validation",
+                   "risk_score":  0.6577041726,
+                   "alert":  true,
+                   "case":  "false_alert"
+               },
+    "playground_input":  {
+                             "customer_state":  "SP",
+                             "purchase_date":  "2018-06-08",
+                             "purchase_hour":  12,
+                             "payment_total":  1270.7,
+                             "max_installments":  10,
+                             "payment_methods":  [
+                                                     "credit_card"
+                                                 ]
+                         },
+    "note":  "Missing payment values need explicit user input in the playground."
+}

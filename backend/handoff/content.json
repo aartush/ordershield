@@ -1,0 +1,125 @@
+﻿{
+    "workflow":  {
+                     "nodes":  [
+                                   {
+                                       "id":  "sources",
+                                       "title":  "CSV Sources",
+                                       "description":  "Validate relational data, keys and missing values."
+                                   },
+                                   {
+                                       "id":  "etl",
+                                       "title":  "Spark ETL",
+                                       "description":  "Aggregate payments before joining orders and customers."
+                                   },
+                                   {
+                                       "id":  "features",
+                                       "title":  "Feature Engineering",
+                                       "description":  "Build order-level location, timing and payment features."
+                                   },
+                                   {
+                                       "id":  "training",
+                                       "title":  "MLlib Training",
+                                       "description":  "Fit preprocessing and class-weighted LR/RF on training data."
+                                   },
+                                   {
+                                       "id":  "validation",
+                                       "title":  "Validation",
+                                       "description":  "Select by average precision and choose a validation-F1 threshold."
+                                   },
+                                   {
+                                       "id":  "inference",
+                                       "title":  "Saved Inference",
+                                       "description":  "Reuse the fitted pipeline for scenarios and Kafka events."
+                                   }
+                               ],
+                     "edges":  [
+                                   {
+                                       "source":  "sources",
+                                       "target":  "etl"
+                                   },
+                                   {
+                                       "source":  "etl",
+                                       "target":  "features"
+                                   },
+                                   {
+                                       "source":  "features",
+                                       "target":  "training"
+                                   },
+                                   {
+                                       "source":  "training",
+                                       "target":  "validation"
+                                   },
+                                   {
+                                       "source":  "validation",
+                                       "target":  "inference"
+                                   }
+                               ]
+                 },
+    "streaming_workflow":  [
+                               "Historical feature producer",
+                               "Kafka orders topic",
+                               "Spark Structured Streaming",
+                               "Saved MLlib model",
+                               "Kafka predictions topic + SQLite",
+                               "FastAPI live feed"
+                           ],
+    "applications":  [
+                         {
+                             "title":  "Review prioritization",
+                             "user":  "E-commerce operations team",
+                             "action":  "Review flagged orders before lower-priority orders.",
+                             "measure":  "Precision and useful detections within review capacity."
+                         },
+                         {
+                             "title":  "Workload planning",
+                             "user":  "Operations manager",
+                             "action":  "Explore thresholds against available review capacity.",
+                             "measure":  "Alerts per day, recall and false-alert workload."
+                         },
+                         {
+                             "title":  "Historical investigation",
+                             "user":  "Business analyst",
+                             "action":  "Explore state, payment and timing associations.",
+                             "measure":  "Patterns requiring further investigation, not causal proof."
+                         }
+                     ],
+    "business_note":  "Reduced cancellations or costs have not been demonstrated.",
+    "target":  {
+                   "positive":  [
+                                    "canceled",
+                                    "unavailable"
+                                ],
+                   "negative":  [
+                                    "delivered"
+                                ]
+               },
+    "split":  {
+                  "training":  "Before 2018-04-01",
+                  "validation":  "2018-04-01 through 2018-06-30",
+                  "test":  "2018-07-01 onward; previously inspected for the baseline"
+              },
+    "features":  [
+                     "customer_state",
+                     "purchase_hour",
+                     "purchase_weekday",
+                     "purchase_month",
+                     "is_weekend",
+                     "payment_total",
+                     "max_installments",
+                     "uses_credit_card",
+                     "uses_boleto",
+                     "uses_voucher",
+                     "uses_debit_card"
+                 ],
+    "limitations":  [
+                        "Current predictive performance is limited.",
+                        "Payment availability at scoring time is assumed; source timestamps are absent.",
+                        "Historical outcome-resolution timestamps are unavailable.",
+                        "Validation selected the model and threshold.",
+                        "The earlier baseline test set was inspected; it is not a pristine holdout.",
+                        "Scenario changes show associations, not causal effects.",
+                        "Brazil 2016â2018 data does not establish present-day Indian COD/RTO performance.",
+                        "Spark runs locally; multi-node scalability has not been benchmarked."
+                    ],
+    "score_note":  "Class-weighted risk scores are not calibrated cancellation probabilities."
+}

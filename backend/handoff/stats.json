@@ -1,0 +1,321 @@
+﻿{
+    "filter":  {
+                   "state":  null
+               },
+    "total_orders":  99441,
+    "delivered":  96478,
+    "risky":  1234,
+    "risk_share":  0.012409368369183738,
+    "statuses":  {
+                     "delivered":  96478,
+                     "shipped":  1107,
+                     "canceled":  625,
+                     "unavailable":  609,
+                     "invoiced":  314,
+                     "processing":  301,
+                     "created":  5,
+                     "approved":  2
+                 },
+    "monthly":  [
+                    {
+                        "month":  "2016-09",
+                        "orders":  4
+                    },
+                    {
+                        "month":  "2016-10",
+                        "orders":  324
+                    },
+                    {
+                        "month":  "2016-12",
+                        "orders":  1
+                    },
+                    {
+                        "month":  "2017-01",
+                        "orders":  800
+                    },
+                    {
+                        "month":  "2017-02",
+                        "orders":  1780
+                    },
+                    {
+                        "month":  "2017-03",
+                        "orders":  2682
+                    },
+                    {
+                        "month":  "2017-04",
+                        "orders":  2404
+                    },
+                    {
+                        "month":  "2017-05",
+                        "orders":  3700
+                    },
+                    {
+                        "month":  "2017-06",
+                        "orders":  3245
+                    },
+                    {
+                        "month":  "2017-07",
+                        "orders":  4026
+                    },
+                    {
+                        "month":  "2017-08",
+                        "orders":  4331
+                    },
+                    {
+                        "month":  "2017-09",
+                        "orders":  4285
+                    },
+                    {
+                        "month":  "2017-10",
+                        "orders":  4631
+                    },
+                    {
+                        "month":  "2017-11",
+                        "orders":  7544
+                    },
+                    {
+                        "month":  "2017-12",
+                        "orders":  5673
+                    },
+                    {
+                        "month":  "2018-01",
+                        "orders":  7269
+                    },
+                    {
+                        "month":  "2018-02",
+                        "orders":  6728
+                    },
+                    {
+                        "month":  "2018-03",
+                        "orders":  7211
+                    },
+                    {
+                        "month":  "2018-04",
+                        "orders":  6939
+                    },
+                    {
+                        "month":  "2018-05",
+                        "orders":  6873
+                    },
+                    {
+                        "month":  "2018-06",
+                        "orders":  6167
+                    },
+                    {
+                        "month":  "2018-07",
+                        "orders":  6292
+                    },
+                    {
+                        "month":  "2018-08",
+                        "orders":  6512
+                    },
+                    {
+                        "month":  "2018-09",
+                        "orders":  16
+                    },
+                    {
+                        "month":  "2018-10",
+                        "orders":  4
+                    }
+                ],
+    "states":  [
+                   {
+                       "customer_state":  "AC",
+                       "orders":  81,
+                       "risky":  0,
+                       "risk_share":  0.0
+                   },
+                   {
+                       "customer_state":  "AL",
+                       "orders":  413,
+                       "risky":  2,
+                       "risk_share":  0.004842615
+                   },
+                   {
+                       "customer_state":  "AM",
+                       "orders":  148,
+                       "risky":  1,
+                       "risk_share":  0.0067567568
+                   },
+                   {
+                       "customer_state":  "AP",
+                       "orders":  68,
+                       "risky":  0,
+                       "risk_share":  0.0
+                   },
+                   {
+                       "customer_state":  "BA",
+                       "orders":  3380,
+                       "risky":  36,
+                       "risk_share":  0.0106508876
+                   },
+                   {
+                       "customer_state":  "CE",
+                       "orders":  1336,
+                       "risky":  13,
+                       "risk_share":  0.0097305389
+                   },
+                   {
+                       "customer_state":  "DF",
+                       "orders":  2140,
+                       "risky":  19,
+                       "risk_share":  0.0088785047
+                   },
+                   {
+                       "customer_state":  "ES",
+                       "orders":  2033,
+                       "risky":  15,
+                       "risk_share":  0.0073782587
+                   },
+                   {
+                       "customer_state":  "GO",
+                       "orders":  2020,
+                       "risky":  22,
+                       "risk_share":  0.0108910891
+                   },
+                   {
+                       "customer_state":  "MA",
+                       "orders":  747,
+                       "risky":  11,
+                       "risk_share":  0.0147255689
+                   },
+                   {
+                       "customer_state":  "MG",
+                       "orders":  11635,
+                       "risky":  139,
+                       "risk_share":  0.0119467125
+                   },
+                   {
+                       "customer_state":  "MS",
+                       "orders":  715,
+                       "risky":  7,
+                       "risk_share":  0.0097902098
+                   },
+                   {
+                       "customer_state":  "MT",
+                       "orders":  907,
+                       "risky":  5,
+                       "risk_share":  0.0055126792
+                   },
+                   {
+                       "customer_state":  "PA",
+                       "orders":  975,
+                       "risky":  6,
+                       "risk_share":  0.0061538462
+                   },
+                   {
+                       "customer_state":  "PB",
+                       "orders":  536,
+                       "risky":  5,
+                       "risk_share":  0.0093283582
+                   },
+                   {
+                       "customer_state":  "PE",
+                       "orders":  1652,
+                       "risky":  9,
+                       "risk_share":  0.0054479419
+                   },
+                   {
+                       "customer_state":  "PI",
+                       "orders":  495,
+                       "risky":  5,
+                       "risk_share":  0.0101010101
+                   },
+                   {
+                       "customer_state":  "PR",
+                       "orders":  5045,
+                       "risky":  62,
+                       "risk_share":  0.0122893954
+                   },
+                   {
+                       "customer_state":  "RJ",
+                       "orders":  12852,
+                       "risky":  154,
+                       "risk_share":  0.0119825708
+                   },
+                   {
+                       "customer_state":  "RN",
+                       "orders":  485,
+                       "risky":  3,
+                       "risk_share":  0.006185567
+                   },
+                   {
+                       "customer_state":  "RO",
+                       "orders":  253,
+                       "risky":  7,
+                       "risk_share":  0.0276679842
+                   },
+                   {
+                       "customer_state":  "RR",
+                       "orders":  46,
+                       "risky":  1,
+                       "risk_share":  0.0217391304
+                   },
+                   {
+                       "customer_state":  "RS",
+                       "orders":  5466,
+                       "risky":  49,
+                       "risk_share":  0.0089645079
+                   },
+                   {
+                       "customer_state":  "SC",
+                       "orders":  3637,
+                       "risky":  37,
+                       "risk_share":  0.0101732197
+                   },
+                   {
+                       "customer_state":  "SE",
+                       "orders":  350,
+                       "risky":  5,
+                       "risk_share":  0.0142857143
+                   },
+                   {
+                       "customer_state":  "SP",
+                       "orders":  41746,
+                       "risky":  619,
+                       "risk_share":  0.0148277679
+                   },
+                   {
+                       "customer_state":  "TO",
+                       "orders":  280,
+                       "risky":  2,
+                       "risk_share":  0.0071428571
+                   }
+               ],
+    "model_cohort":  {
+                         "orders":  97712,
+                         "risky":  1234,
+                         "split_counts":  [
+                                              {
+                                                  "split":  "test",
+                                                  "label":  0,
+                                                  "orders":  12510
+                                              },
+                                              {
+                                                  "split":  "test",
+                                                  "label":  1,
+                                                  "orders":  169
+                                              },
+                                              {
+                                                  "split":  "train",
+                                                  "label":  0,
+                                                  "orders":  64322
+                                              },
+                                              {
+                                                  "split":  "train",
+                                                  "label":  1,
+                                                  "orders":  983
+                                              },
+                                              {
+                                                  "split":  "validation",
+                                                  "label":  0,
+                                                  "orders":  19646
+                                              },
+                                              {
+                                                  "split":  "validation",
+                                                  "label":  1,
+                                                  "orders":  82
+                                              }
+                                          ]
+                     }
+}

@@ -1,0 +1,1 @@
+'use client';export default function ErrorPage({reset}:{reset:()=>void}){return <div className="error"><h1>This view could not render.</h1><p>Your browser settings and scenario inputs are preserved.</p><button onClick={reset}>Try again</button></div>}
